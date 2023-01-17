@@ -20,6 +20,7 @@ body{
     background-color: var(--violeta);
     color: var(--blanco);
     min-height: 100vh;
+    position: relative;
 }
 
 .nav-container{
@@ -60,7 +61,7 @@ nav .cart-container .icon{
 
 
 .modal-cart{
-    /* border: solid red; */
+    display: none;
     position: absolute;
     padding: 10px;
     color: var(--azul-oscuro);
@@ -69,9 +70,22 @@ nav .cart-container .icon{
     width: 400px;
     min-height: 100px;
     max-height: 200px;
-    /* overflow-y: scroll; */
     background-color: var(--blanco);
     border-radius: 5px;
+}
+
+.show{
+    display: block;
+}
+
+.fa-xmark{
+    width: 100%;
+    text-align: end;
+    color: red;
+    padding-right: 1px;
+    padding-bottom: 8px;
+    cursor: pointer;
+    font-size: 25px;
 }
 
 .modal-cart .modal-cart-items-container{
@@ -88,6 +102,10 @@ table{
 
 th,td{
     padding: 5px;
+}
+
+td{
+    text-transform: capitalize;
 }
 
 .modal-cart-items i{
@@ -154,10 +172,16 @@ th,td{
 
 .card-title{
     margin-bottom: 5px;
+    text-transform: capitalize;
 }
 
 .card-description{
     margin-bottom: 10px;
+}
+
+.card-price{
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .card-btn{
@@ -180,6 +204,41 @@ th,td{
 
 .card-btn:active{
     transform: scale(0.9);
+}
+
+/* Aceptacion de compra */
+
+.cartel-compra-fondo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.cartel-compra{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--azul-oscuro);
+}
+
+.cartel-compra h3{
+    margin-bottom: 20px;
+}
+
+.container-opciones{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 

@@ -16,6 +16,7 @@
         <div class="cart-container">
             <i class="fa-solid fa-cart-shopping icon"></i>
                 <div class="modal-cart">
+                    <i class="fa-solid fa-xmark"></i>
                     <div class="modal-cart-items-container">
                      <table class="modal-cart-items">
                         <tr>
@@ -24,96 +25,32 @@
                             <th>Cantidad</th>
                             <th></th>
                         </tr>
-                        <tr>
-                            <td>Berserk</td>
-                            <td>$1700</td>
-                            <td>1</td>
-                            <td><i class="fa-sharp fa-solid fa-trash"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Berserk</td>
-                            <td>$1700</td>
-                            <td>1</td>
-                            <td><i class="fa-sharp fa-solid fa-trash"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Berserk</td>
-                            <td>$1700</td>
-                            <td>1</td>
-                            <td><i class="fa-sharp fa-solid fa-trash"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Berserk</td>
-                            <td>$1700</td>
-                            <td>1</td>
-                            <td><i class="fa-sharp fa-solid fa-trash"></i></td>
-                        </tr>
                     </table>   
                     </div>
                     <div class="modal-cart-footer">
-                        <div class="precio-total-container">Total: $<span id="total">7897</span></div>
-                        <button class="btn btn-green">Vaciar</button>
-                        <button class="btn btn-red">Comprar</button>
+                        <div class="precio-total-container">Total: $<span id="total">0</span></div>
+                        <button class="btn btn-green" id="btn-vaciar">Vaciar</button>
+                        <button class="btn btn-red" id="btn-comprar">Comprar</button>
                     </div>
                 </div>
         </div>
     </nav>        
     </div>
 
+    <section class="contenedor-productos"></section>
 
-
-    <section class="contenedor-productos">
-    <article class="card">
-        <img class="card-img" src="./imgs/berserk-img.webp">
-        <h2 class="card-title">Titulo Prod</h2>
-        <p class="card-description">descripcion</p>
-        <button class="card-btn">Añadir al carrito</button>
-    </article>       
-    <article class="card">
-        <img class="card-img" src="./imgs/naruto-img.webp">
-        <h2 class="card-title">Titulo Prod</h2>
-        <p class="card-description">descripcion</p>
-        <button class="card-btn">Añadir al carrito</button>
-    </article>   
-    <article class="card">
-        <img class="card-img" src="./imgs/chainsawman-img.webp">
-        <h2 class="card-title">Titulo Prod</h2>
-        <p class="card-description">descripcion</p>
-        <button class="card-btn">Añadir al carrito</button>
-    </article>   
-    <article class="card">
-        <img class="card-img" src="./imgs/berserk-img.webp">
-        <h2 class="card-title">Titulo Prod</h2>
-        <p class="card-description">descripcion</p>
-        <button class="card-btn">Añadir al carrito</button>
-    </article>       
-    <article class="card">
-        <img class="card-img" src="./imgs/berserk-img.webp">
-        <h2 class="card-title">Titulo Prod</h2>
-        <p class="card-description">descripcion</p>
-        <button class="card-btn">Añadir al carrito</button>
-    </article>   
-    <article class="card">
-        <img class="card-img" src="./imgs/berserk-img.webp">
-        <h2 class="card-title">Titulo Prod</h2>
-        <p class="card-description">descripcion</p>
-        <button class="card-btn">Añadir al carrito</button>
-    </article>  
-    <article class="card">
-        <img class="card-img" src="./imgs/berserk-img.webp">
-        <h2 class="card-title">Titulo Prod</h2>
-        <p class="card-description">descripcion</p>
-        <button class="card-btn">Añadir al carrito</button>
-    </article>   
-    <article class="card">
-        <img class="card-img" src="./imgs/berserk-img.webp">
-        <h2 class="card-title">Titulo Prod</h2>
-        <p class="card-description">descripcion</p>
-        <button class="card-btn">Añadir al carrito</button>
-    </article>    
-    </section>
+    <div class="cartel-compra-fondo">
+        <div class="cartel-compra">
+            <h3>Esta seguro que quiere comprar esta basofia?</h3>
+            <div class="container-opciones">
+                <span id="si" class="btn btn-green">SI</span>
+                <span id="no" class="btn btn-red">No mostro</span>
+            </div>
+        </div>
+    </div>
 
 </main>
 
+<script src="./index.js"></script>
 </body>
 </html>

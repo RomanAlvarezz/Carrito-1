@@ -2,49 +2,57 @@
     {
         "nombre": "berserk",
         "descripcion": "Una aventura epica de fantasia oscura",
-        "url": "./imgs/berserk-img.webpg",
-        "precio": 1700
+        "url": "./imgs/berserk-img.webp",
+        "precio": 1700,
+        "id": 1
     },
     {
         "nombre": "chainsawman",
-        "descripcion": "Las locuras del pibe motosierra",
-        "url": "./imgs/chainsawman-img.webpg",
-        "precio": 2000
+        "descripcion": "Las locuras del pibe motosierra y pochita",
+        "url": "./imgs/chainsawman-img.webp",
+        "precio": 2000,
+        "id": 2
     },
     {
         "nombre": "demonslayer",
         "descripcion": "Un pibito agarra una katana y empieza a matar demonios",
-        "url": "./imgs/demonslayer-img.webpg",
-        "precio": 1800
+        "url": "./imgs/demonslayer-img.webp",
+        "precio": 1800,
+        "id": 3
     },
     {
         "nombre": "jujutsukaisen",
         "descripcion": "Una mezcla entre kung-fu moderno y naruto",
-        "url": "./imgs/jujutsukaisen-img.webpg",
-        "precio": 2000
+        "url": "./imgs/jujutsukaisen-img.webp",
+        "precio": 2000,
+        "id": 4
     },
     {
         "nombre": "monster",
         "descripcion": "Un médico se mete con unos narcos y se pone turbio",
-        "url": "./imgs/monster-img.webpg",
-        "precio": 1450
+        "url": "./imgs/monster-img.webp",
+        "precio": 1450,
+        "id": 5
     },
     {
         "nombre": "naruto",
         "descripcion": "Una de las mejores historias de superación de todo el anime",
-        "url": "./imgs/naruto-img.webpg",
-        "precio": 1500
+        "url": "./imgs/naruto-img.webp",
+        "precio": 1500,
+        "id": 6
     },
     {
         "nombre": "spyxfamily",
         "descripcion": "Anya lidiando con un detective y un vampiro básicamente",
-        "url": "./imgs/spyxfamily-img.webpg",
-        "precio": 1200
+        "url": "./imgs/spyxfamily-img.webp",
+        "precio": 1200,
+        "id": 7
     },
     {
         "nombre": "vindlandsaga",
         "descripcion": "A un vikinguito le matan al papa, busca venganza y se la cagan",
-        "url": "./imgs/vinlandsaga-img.webpg",
-        "precio": 1500
+        "url": "./imgs/vinlandsaga-img.webp",
+        "precio": 1500,
+        "id": 8
     }
 ]
