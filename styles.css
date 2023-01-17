@@ -92,7 +92,7 @@ nav .cart-container .icon{
     width: 100%;
     border-bottom: solid grey;
     max-height: 100px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 table{
