@@ -1,9 +1,11 @@
 const d = document,
 $contenedorCards = d.querySelector('.contenedor-productos'),
 $btnCart = d.querySelector('.cart-container'),
+$cartNumber = d.querySelector('.cart-number'),
 $modalCart = d.querySelector('.modal-cart'),
-$xMark = d.querySelector('.fa-xmark'),
 $table = d.querySelector('.modal-cart-items'),
+$xMark = d.querySelector('.fa-xmark'),
+$cartEmpty = d.querySelector('.modal-cart-empty'),
 $total = d.getElementById('total'),
 $btnVaciar = d.getElementById('btn-vaciar'),
 $btnComprar = d.getElementById('btn-comprar'),
@@ -23,7 +25,8 @@ $btnVaciar.addEventListener('click', ()=> {
         <th>Cantidad</th>
         <th></th>
     </tr>`;
-    $total.textContent = '0'
+    $total.textContent = 0;
+    $cartNumber.textContent = 0
 });
 
 $btnComprar.addEventListener('click',()=>{
@@ -87,7 +90,13 @@ function asignCardsEvents(nodelist){
 
                 $icon.addEventListener('click', e => {
                     $total.textContent = parseFloat($total.textContent) - price;
+                    if($total.textContent == '0'){
+                        $cartEmpty.classList.remove('d-hide');
+                    } else {
+                        $cartEmpty.classList.add('d-hide');
+                    }
                     if($tdspan.textContent == '1'){
+                        $cartNumber.textContent = parseFloat($cartNumber.textContent) - 1;
                         $tr.remove();
                     } else {
                         $tdspan.textContent = parseFloat($tdspan.textContent) - 1;
@@ -96,13 +105,19 @@ function asignCardsEvents(nodelist){
                 })
 
                 $table.appendChild($tr);
-                $total.textContent = parseFloat($total.textContent) + price;    
+                $total.textContent = parseFloat($total.textContent) + price;
+                $cartNumber.textContent = parseFloat($cartNumber.textContent) + 1;
+                if($total.textContent == '0'){
+                    $cartEmpty.classList.remove('d-hide');
+                } else {
+                    $cartEmpty.classList.add('d-hide');
+                }
             } else {
                 console.log('Ese manga ya esta en el carrito');
                 const $itemRepetido = $table.querySelector(`tr[tr-id="${id}"] td span`);
                 console.log($itemRepetido.textContent);
                 $itemRepetido.textContent = parseFloat($itemRepetido.textContent) + 1;
-                $total.textContent = parseFloat($total.textContent) + price;   
+                $total.textContent = parseFloat($total.textContent) + price;  
             }
 
             
@@ -112,8 +127,9 @@ function asignCardsEvents(nodelist){
 
 function insertCards(cards){
     $contenedorCards.innerHTML = '';
+    let fragment = '';
     for (const card of cards) {
-        $contenedorCards.innerHTML += `
+        fragment += `
         <article class="card" data-id="${card.id}">
             <img class="card-img" src="${card.url}">
             <h2 class="card-title">${card.nombre}</h2>
@@ -123,6 +139,7 @@ function insertCards(cards){
         </article>   
         `;
     }
+    $contenedorCards.innerHTML = fragment;
 
     const $insertedCards = d.querySelectorAll('.card');
     asignCardsEvents($insertedCards);

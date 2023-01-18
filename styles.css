@@ -47,7 +47,6 @@ nav .cart-container{
 }
 
 nav .icon:hover{
-    /* color: var(--violeta); */
     cursor: pointer;
     outline-offset: 5px;
     border-radius: 5px;
@@ -59,6 +58,16 @@ nav .cart-container .icon{
     font-size: 30px;
 }
 
+.cart-number{
+    position: absolute;
+    font-size: 13px;
+    padding: 2px;
+    color: var(--blanco);
+    background-color: var(--azul-oscuro);
+    top: -15px;
+    right: -10px;
+    border-radius: 3px;
+}
 
 .modal-cart{
     display: none;
@@ -111,6 +120,15 @@ td{
 .modal-cart-items i{
     color: red;
     cursor: pointer;
+}
+
+.modal-cart-empty{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.d-hide{
+    display: none;
 }
 
 .modal-cart-footer{
